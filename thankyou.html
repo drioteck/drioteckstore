@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Thank You | Drio Teck</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .thank-you-wrapper {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .thank-you-text {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    .action-buttons a {
+      margin: 10px;
+      padding: 12px 30px;
+      font-weight: 600;
+    }
+
+    .user-name {
+  color: #00ffcc;
+  font-weight: 700;
+}
+
+
+  </style>
+</head>
+
+<body class="dark-background">
+
+  <main class="main">
+    <section class="thank-you-wrapper section">
+      <div class="container" data-aos="zoom-in" data-aos-duration="1200">
+
+        <i class="bi bi-check-circle-fill mb-4" style="font-size:4rem;color:#00ffcc;"></i>
+
+        <h1 class="thank-you-text mb-3">
+          THANK YOU FOR YOUR MESSAGE
+        </h1>
+
+        <p class="mb-4">
+          Thank you, <span class="user-name" id="userName">there</span>!<br>
+          We’ve received your message successfully.<br>
+          Our team at <strong>Drio Teck</strong> will get back to you shortly.
+        </p>
+
+        <p class="mt-3 text-muted" id="redirectText">
+          You’ll be redirected to the home page shortly…
+        </p>
+
+        <div class="action-buttons">
+          <a href="index.html" class="btn btn-outline-light">
+            <i class="bi bi-house-door"></i> Back to Home
+          </a>
+
+          <a href="index.html#contact" class="btn btn-primary">
+            <i class="bi bi-chat-heart"></i> Submit Another Message
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+  <footer id="footer" class="footer position-relative">
+    <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Drio Teck</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://drioteck.store/">Daniel Romeo</a>
+      </div>
+  </footer>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <script>
+    AOS.init();
+ 
+
+  // Get name from URL
+  const params = new URLSearchParams(window.location.search);
+  const name = params.get("name");
+
+  if (name) {
+    document.getElementById("userName").textContent = name;
+  }
+
+  // Auto redirect after 7 seconds
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 15000);
+</script>
+
+
+</body>
+</html>
